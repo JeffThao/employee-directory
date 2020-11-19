@@ -22,7 +22,6 @@ class App extends Component {
 
   sortName =()  => {
     console.log(this.state.employee.sort(function(a, b) {
-      // ignore upper and lowercase
       let nameA = a.name;
       let nameB = b.name;
       if (nameA < nameB) {

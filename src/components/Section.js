@@ -1,7 +1,5 @@
 import React from "react";
 
-
-
 function Section(props) {
   return (
     <div className="container">
@@ -17,6 +15,7 @@ function Section(props) {
                 placeholder="Search"
               />
             </div>
+            {/* need on click function for the button to submit */}
             <button type="submit" className="btn btn-primary">
               Submit
             </button>
@@ -28,14 +27,15 @@ function Section(props) {
             <tr>
               <th scope="col">Image</th>
               <th scope="col">Name</th>
+              {/* <th scope="col">Gender</th> */}
               <th scope="col">Phone</th>
               <th scope="col">Email</th>
             </tr>
           </thead>
-
-          {props.employee.map((currentEmployee) => (
-            <tbody key={currentEmployee.login.md5}>
-              <tr >
+          
+            <tbody >
+            {props.employee.map((currentEmployee) => (
+              <tr key={currentEmployee.login.md5}>
                 <th scope="row">
                   <img
                     src={currentEmployee.picture.medium}
@@ -48,8 +48,8 @@ function Section(props) {
                 <td>{currentEmployee.cell}</td>
                 <td>{currentEmployee.email}</td>
               </tr>
+              ))}
             </tbody>
-          ))}
         </table>
       </div>
     </div>
