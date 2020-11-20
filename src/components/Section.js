@@ -15,19 +15,16 @@ function Section(props) {
                 placeholder="Search"
               />
             </div>
-            {/* need on click function for the button to submit */}
             <button type="submit" className="btn btn-primary">
               Submit
             </button>
           </form>
         </div>
-        {/* =============================== */}
         <table className="table table-striped">
           <thead>
             <tr>
               <th scope="col">Image</th>
               <th scope="col">Name</th>
-              {/* <th scope="col">Gender</th> */}
               <th scope="col">Phone</th>
               <th scope="col">Email</th>
             </tr>
